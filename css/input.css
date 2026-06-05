@@ -1,0 +1,49 @@
+@import "tailwindcss";
+@font-face {
+    font-family: 'Cairo_semi-bold';
+    src: url('../fonts/Cairo-SemiBold.ttf');
+    font-weight: 600;
+    font-style: semi-bold;
+}
+
+@font-face {
+    font-family: 'Cairo-bold';
+    src: url('../fonts/Cairo-Bold.ttf');
+    font-weight: 700;
+    font-style: bold;
+}
+@font-face {
+    font-family: 'Cairo-regular';
+    src: url('../fonts/Cairo-Regular.ttf');
+    font-weight: 400;
+    font-style: regular;
+}
+@font-face {
+    font-family: 'Cairo-medium';
+    src: url('../fonts/Cairo-Medium.ttf');
+    font-weight: 500;
+    font-style: medium;
+
+}
+@theme {
+    --font-cairo-bold: "Cairo-bold", sans-serif;
+    --font-cairo-semi-bold: "Cairo_semi-bold", sans-serif;
+    --font-cairo-regular: "Cairo-regular", sans-serif;
+    --font-cairo-medium: "Cairo-medium", sans-serif;
+    --background-image-gradient-primary: linear-gradient(270deg, #26E6C9 0%, #149397 55%, #112535 100%);
+    --color-primary: #286570;
+    --color-secondary: #031632;
+    --background-image-gradient-icon: linear-gradient(180deg, #2EC4B6 0%, #1F8A8A 100%);
+
+}
+.container {
+    width : 80%;
+    margin: 0 auto;
+}
+.menu-open {
+    display: flex !important;
+    flex-direction: column;
+}
+@source "index.html";
+@source "components/**/*.html";
+@source "pages/**/*.html";

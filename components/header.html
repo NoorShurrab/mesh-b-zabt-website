@@ -1,0 +1,111 @@
+<!-- <link href="../css/output.css" rel="stylesheet"> -->
+<!-- <header dir="rtl" class="w-full bg-white/90 backdrop-blur-md shadow-lg fixed top-0 left-0 right-0 z-50 
+transition-all duration-300">
+    <div class="header-container flex justify-between items-center h-22 px-25 py-10">
+        <div class="logo py-8">
+        <img src="/assets/logo-cropped.png" alt="MESH B-ZABT Logo" class="w-[252px] h-[80px] object-contain"/>
+        </div>
+        <nav id="main-nav" class="lg:flex items-center gap-12">
+        <ul class="flex gap-12 list-none font-cairo-semi-bold text-base text-secondary">
+            <li><a href="/index.html" class="hover:text-primary transition-colors">الرئيسية</a></li>
+            <li><a href="/pages/services.html" class="hover:text-primary transition-colors">خدماتنا</a></li>
+            <li><a href="/pages/works.html" class="hover:text-primary transition-colors">أعمالنا</a></li>
+            <li><a href="/pages/about.html" class="hover:text-primary transition-colors">من نحن</a></li>
+            <li><a href="/pages/packages.html" class="hover:text-primary transition-colors">باقاتنا</a></li>
+            <li><a href="/pages/blog.html" class="hover:text-primary transition-colors">المدونة</a></li>
+            <li><a href="/pages/contact.html" class="hover:text-primary transition-colors">اتصل بنا</a></li>
+        </ul>
+        <div class="start_journey hidden md:block">
+            <a href="/pages/whatsapp.html" class="font-cairo-semi-bold text-white bg-gradient-primary bg-[length:200%_auto] bg-left px-10 py-2 rounded-[20px] transition-all duration-700 ease-in-out hover:bg-right">ابدأ رحلتك معنا</a>
+        </div>
+        </nav>
+        <div class="lg:hidden flex items-center">
+            <button id="menu-btn" class="text-secondary focus:outline-none p-2 relative w-10 h-10" aria-label="Toggle Menu">
+                <svg id="hamburger-icon" class="w-7 h-7 absolute top-1.5 left-1.5 transition-all duration-300 transform scale-100" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+                <svg id="close-icon" class="w-7 h-7 absolute top-1.5 left-1.5 transition-all duration-300 transform scale-0 opacity-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+        </div>
+    </div>
+</header>
+
+<script>
+    const menuBtn = document.getElementById('menu-btn');
+    const nav = document.getElementById('main-nav');
+    const hamburgerIcon = document.getElementById('hamburger-icon');
+    const closeIcon = document.getElementById('close-icon');
+    const mobileLinks = document.querySelectorAll('.mobile-link');
+
+    function toggleMenu() {
+        const isHidden = nav.classList.toggle('hidden');
+        if (isHidden) {
+            hamburgerIcon.classList.remove('scale-0', 'opacity-0');
+            closeIcon.classList.add('scale-0', 'opacity-0');
+        } else {
+            hamburgerIcon.classList.add('scale-0', 'opacity-0');
+            closeIcon.classList.remove('scale-0', 'opacity-0');
+        }
+    }
+    menuBtn.addEventListener('click', () => {
+    nav.classList.toggle('menu-open');
+});
+    mobileLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            if (!nav.classList.contains('hidden')) {
+                toggleMenu();
+            }
+        });
+    });
+</script> -->
+<!-- <link href="../css/output.css" rel="stylesheet"> -->
+<header dir="rtl" class="w-full bg-white/90 backdrop-blur-md shadow-lg fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+    
+    <div class="header-container flex justify-between items-center h-22 px-25 py-10">
+        <div class="logo py-8">
+            <img src="/assets/logo-cropped.png" alt="MESH B-ZABT Logo" class="w-[252px] h-[80px] object-contain"/>
+        </div>
+        <nav id="main-nav" class="hidden lg:flex items-center gap-12">
+            <ul class="flex gap-12 list-none font-cairo-semi-bold text-base text-secondary">
+                <li><a href="/index.html" class="hover:text-primary transition-colors">الرئيسية</a></li>
+                <li><a href="/pages/services.html" class="hover:text-primary transition-colors">خدماتنا</a></li>
+                <li><a href="/pages/works.html" class="hover:text-primary transition-colors">أعمالنا</a></li>
+                <li><a href="/pages/about.html" class="hover:text-primary transition-colors">من نحن</a></li>
+                <li><a href="/pages/packages.html" class="hover:text-primary transition-colors">باقاتنا</a></li>
+                <li><a href="/pages/blog.html" class="hover:text-primary transition-colors">المدونة</a></li>
+                <li><a href="/pages/contact.html" class="hover:text-primary transition-colors">اتصل بنا</a></li>
+            </ul>
+            <div class="start_journey hidden md:block">
+                <a href="/pages/whatsapp.html" class="font-cairo-semi-bold text-white bg-gradient-primary bg-[length:200%_auto] bg-left px-10 py-2 rounded-[20px] transition-all duration-700 ease-in-out hover:bg-right">ابدأ رحلتك معنا</a>
+            </div>
+        </nav>
+        <div class="lg:hidden flex items-center">
+            <button id="menu-btn" class="text-secondary focus:outline-none p-2 relative w-10 h-10" aria-label="Toggle Menu">
+                <svg id="hamburger-icon" class="w-7 h-7 absolute top-1.5 left-1.5 transition-all duration-300 transform scale-100" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+                <svg id="close-icon" class="w-7 h-7 absolute top-1.5 left-1.5 transition-all duration-300 transform scale-0 opacity-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-gray-100 w-full">
+        <ul class="flex flex-col p-5 gap-4 font-cairo-semi-bold text-base text-secondary list-none">
+            <li><a href="/index.html" class="block hover:text-primary transition-colors py-2 border-b border-gray-50">الرئيسية</a></li>
+            <li><a href="/pages/services.html" class="block hover:text-primary transition-colors py-2 border-b border-gray-50">خدماتنا</a></li>
+            <li><a href="/pages/works.html" class="block hover:text-primary transition-colors py-2 border-b border-gray-50">أعمالنا</a></li>
+            <li><a href="/pages/about.html" class="block hover:text-primary transition-colors py-2 border-b border-gray-50">من نحن</a></li>
+            <li><a href="/pages/packages.html" class="block hover:text-primary transition-colors py-2 border-b border-gray-50">باقاتنا</a></li>
+            <li><a href="/pages/blog.html" class="block hover:text-primary transition-colors py-2 border-b border-gray-50">المدونة</a></li>
+            <li><a href="/pages/contact.html" class="block hover:text-primary transition-colors py-2">اتصل بنا</a></li>
+            <li class="mt-2">
+                <a href="/pages/whatsapp.html" class="block text-center font-cairo-semi-bold text-white bg-gradient-primary px-6 py-2.5 rounded-[20px]">ابدأ رحلتك معنا</a>
+            </li>
+        </ul>
+    </div>
+
+</header>
