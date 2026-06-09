@@ -1,33 +1,32 @@
 <header id="main-nav" class="top-0 left-0 right-0 z-50 bg-white transition-all duration-300">
   <div class="w-[93%] mx-auto px-6 h-[88px] flex items-center justify-between">
 
-    <!-- Logo — يمين -->
+    <!-- Logo -->
     <a href="/" aria-label="MESH B-Zabt" class="shrink-0">
       <img src="/public/assets/images/logob.png" alt="MESH B-Zabt" class="h-18 w-auto"/>
     </a>
 
-    <div class="flex items-center gap-8">
-        <!-- Nav Links — وسط -->
-    <nav class="hidden md:flex items-center gap-8 mx-auto" aria-label="التنقل الرئيسي">
-      <a href="/"                    data-nav-link class="font-semibold text-[16px] text-[#1A2B48] hover:text-[#286570] transition-colors px-[6px]">الرئيسية</a>
-      <a href="/pages/services.html" data-nav-link class="font-semibold text-[16px] text-[#1A2B48] hover:text-[#286570] transition-colors px-[6px]">خدماتنا</a>
-      <a href="/pages/works.html"    data-nav-link class="font-semibold text-[16px] text-[#1A2B48] hover:text-[#286570] transition-colors px-[6px]">أعمالنا</a>
-      <a href="/pages/about.html"    data-nav-link class="font-semibold text-[16px] text-[#1A2B48] hover:text-[#286570] transition-colors px-[6px]">من نحن</a>
-      <a href="/pages/packages.html" data-nav-link class="font-semibold text-[16px] text-[#1A2B48] hover:text-[#286570] transition-colors px-[6px]">باقاتنا</a>
-      <a href="/pages/blog.html"     data-nav-link class="font-semibold text-[16px] text-[#1A2B48] hover:text-[#286570] transition-colors px-[6px]">المدونة</a>
-      <a href="/pages/contact.html"  data-nav-link class="font-semibold text-[16px] text-[#1A2B48] hover:text-[#286570] transition-colors px-[6px]">اتصل بنا</a>
-    </nav>
+    <!-- Desktop Nav + CTA -->
+    <div class="hidden min-[1199px]:flex items-center gap-8">
+      <nav class="flex items-center gap-8 mx-auto" aria-label="التنقل الرئيسي">
+        <a href="/"                    data-nav-link class="font-semibold text-[16px] text-[#1A2B48] hover:text-[#286570] transition-colors px-[6px]">الرئيسية</a>
+        <a href="/pages/services.html" data-nav-link class="font-semibold text-[16px] text-[#1A2B48] hover:text-[#286570] transition-colors px-[6px]">خدماتنا</a>
+        <a href="/pages/works.html"    data-nav-link class="font-semibold text-[16px] text-[#1A2B48] hover:text-[#286570] transition-colors px-[6px]">أعمالنا</a>
+        <a href="/pages/about.html"    data-nav-link class="font-semibold text-[16px] text-[#1A2B48] hover:text-[#286570] transition-colors px-[6px]">من نحن</a>
+        <a href="/pages/packages.html" data-nav-link class="font-semibold text-[16px] text-[#1A2B48] hover:text-[#286570] transition-colors px-[6px]">باقاتنا</a>
+        <a href="/pages/blog.html"     data-nav-link class="font-semibold text-[16px] text-[#1A2B48] hover:text-[#286570] transition-colors px-[6px]">المدونة</a>
+        <a href="/pages/contact.html"  data-nav-link class="font-semibold text-[16px] text-[#1A2B48] hover:text-[#286570] transition-colors px-[6px]">اتصل بنا</a>
+      </nav>
 
-    <!-- CTA — شمال -->
-    <a href="/pages/contact.html"
-       class="hidden md:inline-flex items-center px-12 py-3 rounded-[18px] btn-gradient text-sm font-bold whitespace-nowrap shrink-0">
-      ابدأ رحلتك معنا
-    </a>
+      <a href="/pages/contact.html"
+         class="inline-flex items-center px-12 py-3 rounded-[18px] btn-gradient text-sm font-bold whitespace-nowrap shrink-0">
+        ابدأ رحلتك معنا
+      </a>
     </div>
 
-    <!-- Hamburger — موبايل فقط -->
+    <!-- Hamburger -->
     <button id="menu-btn"
-            class="md:hidden flex flex-col gap-[5px] p-1 cursor-pointer border-none bg-transparent"
+            class="flex min-[1199px]:hidden flex-col gap-[5px] p-1 cursor-pointer border-none bg-transparent"
             aria-label="فتح القائمة"
             aria-expanded="false">
       <span class="block w-6 h-[2px] bg-[#1A2B48] rounded transition-all duration-300"></span>
@@ -37,9 +36,9 @@
 
   </div>
 
-  <!-- Mobile Menu -->
+  <!-- Mobile Menu — بدون أي breakpoint classes -->
   <div id="mobile-menu"
-       class="hidden md:hidden bg-white border-t border-[#e4e2e5] px-6 py-4 flex-col gap-0">
+       class="hidden bg-white border-t border-[#e4e2e5] px-6 py-4 flex-col gap-0">
     <a href="/"                    data-nav-link class="py-4 text-sm font-semibold text-[#1A2B48] border-b border-[#e4e2e5] text-right block">الرئيسية</a>
     <a href="/pages/services.html" data-nav-link class="py-4 text-sm font-semibold text-[#1A2B48] border-b border-[#e4e2e5] text-right block">خدماتنا</a>
     <a href="/pages/works.html"    data-nav-link class="py-4 text-sm font-semibold text-[#1A2B48] border-b border-[#e4e2e5] text-right block">أعمالنا</a>

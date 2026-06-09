@@ -13,10 +13,24 @@ export default defineConfig({
         const header        = readFileSync('./src/partials/header.html', 'utf-8')
         const footer        = readFileSync('./src/partials/footer.html', 'utf-8')
         const servicesPaths = readFileSync('./src/partials/services-paths.html', 'utf-8')
+        const challenges = readFileSync('./src/partials/challenges.html', 'utf-8')
+        const solutions = readFileSync('./src/partials/solutions.html', 'utf-8')
+        const steps = readFileSync('./src/partials/steps.html', 'utf-8')
+        const packages = readFileSync('./src/partials/packages.html', 'utf-8')
+        const testimonials = readFileSync('./src/partials/testimonials.html', 'utf-8')
+        const faq = readFileSync('./src/partials/faq.html', 'utf-8')
+
         return html
           .replace('<%- header %>',        header)
           .replace('<%- footer %>',         footer)
           .replace('<%- servicesPaths %>', servicesPaths)
+          .replace('<%- challenges %>', challenges)
+          .replace('<%- solutions %>', solutions)
+          .replace('<%- steps %>', steps)
+          .replace('<%- packages %>', packages)
+          .replace('<%- testimonials %>', testimonials)
+          .replace('<%- faq %>', faq)
+
       },
       handleHotUpdate({ file, server }) {
         // لو أي partial اتغير — reload تلقائي
@@ -40,6 +54,10 @@ export default defineConfig({
         about:    resolve(__dirname, 'pages/about.html'),
         blog:     resolve(__dirname, 'pages/blog.html'),
         contact:  resolve(__dirname, 'pages/contact.html'),
+        'path-business':      resolve(__dirname, 'pages/path-business.html'),
+        'path-academic':      resolve(__dirname, 'pages/path-academic.html'),
+        'path-institutions':  resolve(__dirname, 'pages/path-institutions.html'),
+        'path-school':        resolve(__dirname, 'pages/path-school.html'),
       },
     },
   },

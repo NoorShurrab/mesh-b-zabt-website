@@ -1,15 +1,14 @@
 export function initNav() {
-  const nav     = document.querySelector('#main-nav')
+  const nav = document.querySelector('#main-nav')
   const menuBtn = document.querySelector('#menu-btn')
   const mobileMenu = document.querySelector('#mobile-menu')
 
-  // Sticky بعد السكرول — مش من البداية
+  // Sticky
   if (nav) {
     window.addEventListener('scroll', () => {
       if (window.scrollY > 10) {
         nav.classList.add('fixed', 'shadow-md')
         nav.classList.remove('relative')
-        // نعوض ارتفاع الناف عشان المحتوى ما ينقفز
         document.body.style.paddingTop = nav.offsetHeight + 'px'
       } else {
         nav.classList.remove('fixed', 'shadow-md')
@@ -22,9 +21,17 @@ export function initNav() {
   // Hamburger toggle
   if (menuBtn && mobileMenu) {
     menuBtn.addEventListener('click', () => {
-      const isHidden = mobileMenu.classList.toggle('hidden')
-      mobileMenu.classList.toggle('flex', !isHidden)
-      menuBtn.setAttribute('aria-expanded', String(!isHidden))
+      const isHidden = mobileMenu.classList.contains('hidden')
+      
+      if (isHidden) {
+        mobileMenu.classList.remove('hidden')
+        mobileMenu.classList.add('flex')
+        menuBtn.setAttribute('aria-expanded', 'true')
+      } else {
+        mobileMenu.classList.add('hidden')
+        mobileMenu.classList.remove('flex')
+        menuBtn.setAttribute('aria-expanded', 'false')
+      }
     })
 
     mobileMenu.querySelectorAll('a').forEach(link => {

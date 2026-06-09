@@ -3,6 +3,12 @@ import { initReveal }    from './modules/reveal.js'
 import { initCounter }   from './modules/counter.js'
 import { initAccordion } from './modules/accordion.js'
 import { initFilter }    from './modules/filter.js'
+import { initChallenges } from './modules/challenges.js'
+import { initSolutions } from './modules/solutions.js'
+import { initSteps } from './modules/steps.js'
+import { initPackages } from './modules/packages.js'
+import { initTestimonials } from './modules/testimonials.js';
+import { initFAQ } from './modules/faq.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   initNav()
@@ -10,4 +16,11 @@ document.addEventListener('DOMContentLoaded', () => {
   initCounter()
   initAccordion()
   initFilter()
+  initChallenges()
+  initSolutions()
+  initSteps()
+  initPackages()
+  initTestimonials()
+  initFAQ()
+
 })
