@@ -3,22 +3,22 @@
 /* ─── FONTS ──────────────────────────────────────────────────── */
 @font-face {
   font-family: 'Cairo';
-  src: url('/public/assets/fonts/Cairo-Regular.ttf') format('truetype');
+  src: url('/assets/fonts/Cairo-Regular.ttf') format('truetype');
   font-weight: 400; font-display: swap;
 }
 @font-face {
   font-family: 'Cairo';
-  src: url('/public/assets/fonts/Cairo-Medium.ttf') format('truetype');
+  src: url('/assets/fonts/Cairo-Medium.ttf') format('truetype');
   font-weight: 500; font-display: swap;
 }
 @font-face {
   font-family: 'Cairo';
-  src: url('/public/assets/fonts/Cairo-SemiBold.ttf') format('truetype');
+  src: url('/assets/fonts/Cairo-SemiBold.ttf') format('truetype');
   font-weight: 600; font-display: swap;
 }
 @font-face {
   font-family: 'Cairo';
-  src: url('/public/assets/fonts/Cairo-Bold.ttf') format('truetype');
+  src: url('/assets/fonts/Cairo-Bold.ttf') format('truetype');
   font-weight: 700; font-display: swap;
 }
 
@@ -45,7 +45,10 @@
   --radius-lg:  12px;
   --radius-xl:  16px;
   --radius-2xl: 24px;
+
+
 }
+
 
 /* ─── BASE ────────────────────────────────────────────────────── */
 *, *::before, *::after { box-sizing: border-box; }
