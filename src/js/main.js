@@ -19,8 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
 })
 document.addEventListener("DOMContentLoaded", () => {
     const counters = document.querySelectorAll('.count-up');
-    const speed = 200; // يمكنك تقليل الرقم لتسريع الحركة أو زيادته لإبطائها
-
+    const speed = 200; 
     const startCounter = (counter) => {
         const target = +counter.getAttribute('data-target');
         const updateCount = () => {
@@ -37,16 +36,14 @@ document.addEventListener("DOMContentLoaded", () => {
         updateCount();
     };
 
-    // تفعيل العداد عندما يصل المستخدم إلى القسم على الشاشة
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 startCounter(entry.target);
-                observer.unobserve(entry.target); // يعمل مرة واحدة فقط عند الرؤية الأولى
+                observer.unobserve(entry.target);  
             }
         });
-    }, { threshold: 0.2 }); // تم تقليل النسبة لتبدأ الحركة فور ظهور جزء بسيط من الصندوق
-
+    }, { threshold: 0.2 });
     counters.forEach(counter => observer.observe(counter));
 });
 

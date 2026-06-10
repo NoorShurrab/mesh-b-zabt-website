@@ -71,6 +71,8 @@ export default defineConfig({
           header: readFileSync('./src/partials/header.html', 'utf-8'),
           footer: readFileSync('./src/partials/footer.html', 'utf-8'),
           servicesPaths: readFileSync('./src/partials/services-paths.html', 'utf-8'),
+          testimonials: readFileSync('./src/partials/testimonials.html', 'utf-8'),
+          faq: readFileSync('./src/partials/faq.html', 'utf-8'),
         }
       }
     })
