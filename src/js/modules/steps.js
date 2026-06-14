@@ -11,8 +11,8 @@ export function initSteps() {
 
   // Header
   header.innerHTML = `
-    ${data.eyebrow ? `<p class="text-sm font-bold text-[#286570] mb-2">${data.eyebrow}</p>` : ''}
-    <h2 class="font-bold text-3xl md:text-4xl text-[#191C1D] mb-3">${data.title}</h2>
+    ${data.eyebrow ? `<p class="text-4xl font-bold text-[#286570] mb-2">${data.eyebrow}</p>` : ''}
+    <h2 class="font-bold text-sm md:text-sm text-[#191C1D] mb-3">${data.title}</h2>
     ${data.subtitle ? `<p class="text-base text-[#44474D]">${data.subtitle}</p>` : ''}
   `
 
@@ -23,7 +23,7 @@ export function initSteps() {
         ${step.icon ? `<img src="${step.icon}" class="w-6 h-6" />` : `<span class="font-bold text-white text-lg">${step.number}</span>`}
       </div>
       <h4 class="font-bold text-base text-[#1A2B48] mb-2">${step.title}</h4>
-      <p class="text-sm text-[#44474D] leading-relaxed">${step.desc}</p>
+      <p class="text-sm px-14 text-[#44474D] leading-relaxed">${step.desc}</p>
     </div>
   `).join('')
 }

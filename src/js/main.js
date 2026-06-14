@@ -8,8 +8,8 @@ import { initSolutions } from './modules/solutions.js'
 import { initSteps } from './modules/steps.js'
 import { initPackages } from './modules/packages.js'
 import { initTestimonials } from './modules/testimonials.js';
-import { initFAQ } from './modules/faq.js';
-
+import { initReviews } from './modules/reviews.js'
+import { initFaq } from './modules/faq.js'
 document.addEventListener('DOMContentLoaded', () => {
   initNav()
   initReveal()
@@ -21,6 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initSteps()
   initPackages()
   initTestimonials()
-  initFAQ()
+  initReviews()
+ initFaq()
 
 })

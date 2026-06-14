@@ -17,19 +17,24 @@ export default defineConfig({
         const solutions = readFileSync('./src/partials/solutions.html', 'utf-8')
         const steps = readFileSync('./src/partials/steps.html', 'utf-8')
         const packages = readFileSync('./src/partials/packages.html', 'utf-8')
-        const testimonials = readFileSync('./src/partials/testimonials.html', 'utf-8')
+        // const testimonials = readFileSync('./src/partials/testimonials.html', 'utf-8')
+        const reviews = readFileSync('./src/partials/reviews.html', 'utf-8')
         const faq = readFileSync('./src/partials/faq.html', 'utf-8')
+        
 
         return html
-          .replace('<%- header %>',        header)
-          .replace('<%- footer %>',         footer)
-          .replace('<%- servicesPaths %>', servicesPaths)
-          .replace('<%- challenges %>', challenges)
-          .replace('<%- solutions %>', solutions)
-          .replace('<%- steps %>', steps)
-          .replace('<%- packages %>', packages)
-          .replace('<%- testimonials %>', testimonials)
-          .replace('<%- faq %>', faq)
+  .replace('<%- header %>',        header)
+  .replace('<%- footer %>',         footer)
+  .replace('<%- servicesPaths %>', servicesPaths)
+  .replace('<%- challenges %>',    challenges)
+  .replace('<%- solutions %>',     solutions)
+  .replace('<%- steps %>',         steps)
+  .replace('<%- packages %>',      packages)
+  .replace('<%- reviews %>',       reviews)
+  .replace('<%- faq %>',           faq)
+  // شيل أي placeholder ما اتبدل
+  .replace(/<%- \w+ %>/g, '')
+          
 
       },
       handleHotUpdate({ file, server }) {

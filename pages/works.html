@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MESH B-Zabt — أعمالنا</title>
+  <link rel="stylesheet" href="/src/css/main.css" />
+</head>
+<body class="bg-[#F8F9FA]">
+
+  <%- header %>
+
+  <main>
+
+    <!-- ═══════════════ HERO ═══════════════ -->
+    <section class="bg-[#F8F8F8] py-16 px-4 md:px-6">
+      <div class="w-[93%] mx-auto text-right">
+
+        <p class="text-sm font-bold text-[#006B5F] mb-3">إنجازاتنا الرقمية</p>
+
+        <h1 class="font-bold text-4xl md:text-4xl text-[#191C1D] mb-5">
+          معرض أعمالنا
+        </h1>
+
+        <p class="text-base text-[#44474D] leading-relaxed max-w-2xl">
+          نستعرض هنا نخبة من المشاريع التعليمية والرقمية التي نفذناها، حيث تجمع بين الأصالة الأكاديمية
+          والابتكار التكنولوجي لتحقيق نتائج استثنائية لعملائنا.
+        </p>
+
+        <div class="w-25 h-1 bg-[#286570] mt-8 ml-auto"></div>
+
+      </div>
+    </section>
+
+
+    <!-- ═══════════════ PORTFOLIO GRID ═══════════════ -->
+    <section class="py-16 px-4 md:px-6">
+      <div class="w-[93%] mx-auto">
+
+        <!-- Filter Tabs -->
+        <div class="flex flex-wrap gap-3 justify-center mb-12">
+          <button class="filter-tab px-7 py-3 rounded-[14px] text-sm font-bold border border-[#e4e2e5] bg-[linear-gradient(299.3deg,#14B8A6_0%,#1A2B48_100%)] text-white transition-all duration-200"
+                  data-filter-tab="all">
+            الكل
+          </button>
+          <button class="filter-tab px-7 py-3 rounded-[14px] text-sm font-bold border border-[#e4e2e5] bg-white text-[#1A2B48] hover:bg-[#1A2B48] hover:text-white transition-all duration-200"
+                  data-filter-tab="school">
+            تعليم مدرسي
+          </button>
+          <button class="filter-tab px-7 py-3  rounded-[14px] text-sm font-bold border border-[#e4e2e5] bg-white text-[#1A2B48] hover:bg-[#1A2B48] hover:text-white transition-all duration-200"
+                  data-filter-tab="research">
+            بحث علمي
+          </button>
+          <button class="filter-tab px-7 py-3 rounded-[14px] text-sm font-bold border border-[#e4e2e5] bg-white text-[#1A2B48] hover:bg-[#1A2B48] hover:text-white transition-all duration-200"
+                  data-filter-tab="business">
+            حلول أعمال
+          </button>
+          <button class="filter-tab px-7 py-3 rounded-[14px] text-sm font-bold border border-[#e4e2e5] bg-white text-[#1A2B48] hover:bg-[#1A2B48] hover:text-white transition-all duration-200"
+                  data-filter-tab="identity">
+            هوية بصرية
+          </button>
+          <button class="filter-tab px-7 py-3 rounded-[14px] text-sm font-bold border border-[#e4e2e5] bg-white text-[#1A2B48] hover:bg-[#1A2B48] hover:text-white transition-all duration-200"
+                  data-filter-tab="marketing">
+            تسويق رقمي
+          </button>
+        </div>
+
+        <!-- Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+          <!-- Card 1 -->
+          <div class="bg-white rounded-2xl overflow-hidden border border-[#e4e2e5] hover:shadow-lg transition-all duration-300 flex flex-col"
+               data-category="school">
+            <div class="relative">
+              <img src="/public/assets/images/works/work-1.png"
+                   alt="منصة تعليمية ذكية"
+                   class="w-full h-48 object-cover"/>
+              <span class="absolute top-3 right-3 bg-white/90 text-[#286570] text-xs font-bold px-3 py-1 rounded-full">
+                تعليم مدرسي
+              </span>
+            </div>
+            <div class="p-5 text-right flex flex-col flex-1">
+              <h3 class="font-bold text-base text-[#1A2B48] mb-2">منصة تعليمية ذكية</h3>
+              <p class="text-sm text-[#44474D] leading-relaxed mb-4 flex-1">
+                تطوير بيئة تعلم تفاعلية لمنصة تدعم أكثر من 5000 طالب مع نظام...
+              </p>
+              <a href="#" class="text-sm font-bold text-[#286570] hover:underline flex items-center gap-1">
+                عرض التفاصيل
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="bg-white rounded-2xl overflow-hidden border border-[#e4e2e5] hover:shadow-lg transition-all duration-300 flex flex-col"
+               data-category="business">
+            <div class="relative">
+              <img src="/public/assets/images/works/work-2.png"
+                   alt="نظام إدارة المدارس"
+                   class="w-full h-48 object-cover"/>
+              <span class="absolute top-3 right-3 bg-white/90 text-[#286570] text-xs font-bold px-3 py-1 rounded-full">
+                حلول أعمال
+              </span>
+            </div>
+            <div class="p-5 text-right flex flex-col flex-1">
+              <h3 class="font-bold text-base text-[#1A2B48] mb-2">نظام إدارة المدارس</h3>
+              <p class="text-sm text-[#44474D] leading-relaxed mb-4 flex-1">
+                حل برمجي متكامل لإدارة شؤون المعلمين والطلاب والجداول الدراسية...
+              </p>
+              <a href="#" class="text-sm font-bold text-[#286570] hover:underline flex items-center gap-1">
+                عرض التفاصيل
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="bg-white rounded-2xl overflow-hidden border border-[#e4e2e5] hover:shadow-lg transition-all duration-300 flex flex-col"
+               data-category="research">
+            <div class="relative">
+              <img src="/public/assets/images/works/work-3.png"
+                   alt="أرشفة الأبحاث الأكاديمية"
+                   class="w-full h-48 object-cover"/>
+              <span class="absolute top-3 right-3 bg-white/90 text-[#286570] text-xs font-bold px-3 py-1 rounded-full">
+                بحث علمي
+              </span>
+            </div>
+            <div class="p-5 text-right flex flex-col flex-1">
+              <h3 class="font-bold text-base text-[#1A2B48] mb-2">أرشفة الأبحاث الأكاديمية</h3>
+              <p class="text-sm text-[#44474D] leading-relaxed mb-4 flex-1">
+                نظام متطور لأرشفة وتصنيف الأبحاث العلمية يسهل عملية الوصول للمراجع...
+              </p>
+              <a href="#" class="text-sm font-bold text-[#286570] hover:underline flex items-center gap-1">
+                عرض التفاصيل
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="bg-white rounded-2xl overflow-hidden border border-[#e4e2e5] hover:shadow-lg transition-all duration-300 flex flex-col"
+               data-category="marketing">
+            <div class="relative">
+              <img src="/public/assets/images/works/work-4.png"
+                   alt="تطبيق التعليم التفاعلي"
+                   class="w-full h-48 object-cover"/>
+              <span class="absolute top-3 right-3 bg-white/90 text-[#286570] text-xs font-bold px-3 py-1 rounded-full">
+                تسويق رقمي
+              </span>
+            </div>
+            <div class="p-5 text-right flex flex-col flex-1">
+              <h3 class="font-bold text-base text-[#1A2B48] mb-2">تطبيق التعليم التفاعلي</h3>
+              <p class="text-sm text-[#44474D] leading-relaxed mb-4 flex-1">
+                تطبيق جوال يهدف لتبسيط المناهج وتعزيز الفهم العملي والتمارين...
+              </p>
+              <a href="#" class="text-sm font-bold text-[#286570] hover:underline flex items-center gap-1">
+                عرض التفاصيل
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Card 5 -->
+          <div class="bg-white rounded-2xl overflow-hidden border border-[#e4e2e5] hover:shadow-lg transition-all duration-300 flex flex-col"
+               data-category="business">
+            <div class="relative">
+              <img src="/public/assets/images/works/work-5.png"
+                   alt="بوابة التدريب الاحترافي"
+                   class="w-full h-48 object-cover"/>
+              <span class="absolute top-3 right-3 bg-white/90 text-[#286570] text-xs font-bold px-3 py-1 rounded-full">
+                حلول أعمال
+              </span>
+            </div>
+            <div class="p-5 text-right flex flex-col flex-1">
+              <h3 class="font-bold text-base text-[#1A2B48] mb-2">بوابة التدريب الاحترافي</h3>
+              <p class="text-sm text-[#44474D] leading-relaxed mb-4 flex-1">
+                بوابة إلكترونية مخصصة لتدريب الموظفين في الشركات الكبرى بنظام...
+              </p>
+              <a href="#" class="text-sm font-bold text-[#286570] hover:underline flex items-center gap-1">
+                عرض التفاصيل
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Card 6 -->
+          <div class="bg-white rounded-2xl overflow-hidden border border-[#e4e2e5] hover:shadow-lg transition-all duration-300 flex flex-col"
+               data-category="school">
+            <div class="relative">
+              <img src="/public/assets/images/works/work-6.png"
+                   alt="استوديو المحتوى التعليمي"
+                   class="w-full h-48 object-cover"/>
+              <span class="absolute top-3 right-3 bg-white/90 text-[#286570] text-xs font-bold px-3 py-1 rounded-full">
+                تعليم مدرسي
+              </span>
+            </div>
+            <div class="p-5 text-right flex flex-col flex-1">
+              <h3 class="font-bold text-base text-[#1A2B48] mb-2">استوديو المحتوى التعليمي</h3>
+              <p class="text-sm text-[#44474D] leading-relaxed mb-4 flex-1">
+                تجمع المحتوى الرقمي والإنتاج ويُنتاج أكثر من 1000 ساعة من المحتوى التعليمي...
+              </p>
+              <a href="#" class="text-sm font-bold text-[#286570] hover:underline flex items-center gap-1">
+                عرض التفاصيل
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Card 7 -->
+          <div class="bg-white rounded-2xl overflow-hidden border border-[#e4e2e5] hover:shadow-lg transition-all duration-300 flex flex-col"
+               data-category="research">
+            <div class="relative">
+              <img src="/public/assets/images/works/work-7.png"
+                   alt="مركز التحليل الإحصائي"
+                   class="w-full h-48 object-cover"/>
+              <span class="absolute top-3 right-3 bg-white/90 text-[#286570] text-xs font-bold px-3 py-1 rounded-full">
+                بحث علمي
+              </span>
+            </div>
+            <div class="p-5 text-right flex flex-col flex-1">
+              <h3 class="font-bold text-base text-[#1A2B48] mb-2">مركز التحليل الإحصائي</h3>
+              <p class="text-sm text-[#44474D] leading-relaxed mb-4 flex-1">
+                منصة رقمية متكاملة لتقديم الخدمات الإحصائية للأطروحات...
+              </p>
+              <a href="#" class="text-sm font-bold text-[#286570] hover:underline flex items-center gap-1">
+                عرض التفاصيل
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Card 8 -->
+          <div class="bg-white rounded-2xl overflow-hidden border border-[#e4e2e5] hover:shadow-lg transition-all duration-300 flex flex-col"
+               data-category="identity">
+            <div class="relative">
+              <img src="/public/assets/images/works/work-8.png"
+                   alt="تطوير هوية بصرية"
+                   class="w-full h-48 object-cover"/>
+              <span class="absolute top-3 right-3 bg-white/90 text-[#286570] text-xs font-bold px-3 py-1 rounded-full">
+                هوية بصرية
+              </span>
+            </div>
+            <div class="p-5 text-right flex flex-col flex-1">
+              <h3 class="font-bold text-base text-[#1A2B48] mb-2">تطوير هوية بصرية</h3>
+              <p class="text-sm text-[#44474D] leading-relaxed mb-4 flex-1">
+                تصميم هوية بصرية كاملة لمؤسسة تعليمية لعكس القيم الأكاديمية...
+              </p>
+              <a href="#" class="text-sm font-bold text-[#286570] hover:underline flex items-center gap-1">
+                عرض التفاصيل
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========= Call to action ============ -->
+     <section class="py-20 px-6" dir="rtl">
+  <div class="max-w-7xl mx-auto bg-gradient-to-l from-[#1A2B48] to-[#286570] rounded-3xl p-12 text-center text-white shadow-xl">
+    
+    <h2 class="text-3xl md:text-4xl font-bold mb-6">هل لديك مشروع طموح؟</h2>
+    
+    <p class="max-w-2xl mx-auto mb-10 text-white/90 leading-relaxed text-lg">
+      دعنا نساعدك في تحويل رؤيتك التعليمية إلى واقع رقمي ملموس باستخدام أحدث التقنيات وأفضل الممارسات الأكاديمية.
+    </p>
+    
+    <button class="bg-[#1A2B48] text-white px-10 py-4 rounded-xl font-bold shadow-lg hover:bg-opacity-90 transition-all transform hover:scale-105">
+      تواصل معنا الآن
+    </button>
+    
+  </div>
+</section>
+
+  </main>
+
+  <%- footer %>
+
+  <script type="module" src="/src/js/main.js"></script>
+</body>
+</html>
