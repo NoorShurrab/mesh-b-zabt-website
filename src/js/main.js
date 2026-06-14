@@ -10,6 +10,8 @@ import { initPackages } from './modules/packages.js'
 import { initTestimonials } from './modules/testimonials.js';
 import { initReviews } from './modules/reviews.js'
 import { initFaq } from './modules/faq.js'
+import { initGallery } from './modules/gallery.js';
+
 document.addEventListener('DOMContentLoaded', () => {
   initNav()
   initReveal()
@@ -22,6 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initPackages()
   initTestimonials()
   initReviews()
- initFaq()
+  initFaq()
+  initGallery()
 
 })
