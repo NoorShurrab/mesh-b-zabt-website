@@ -11,6 +11,7 @@ import { initTestimonials } from './modules/testimonials.js';
 import { initReviews } from './modules/reviews.js'
 import { initFaq } from './modules/faq.js'
 import { initGallery } from './modules/gallery.js';
+import { initTeam } from './modules/team.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   initNav()
@@ -26,5 +27,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initReviews()
   initFaq()
   initGallery()
+  initTeam()
 
 })
