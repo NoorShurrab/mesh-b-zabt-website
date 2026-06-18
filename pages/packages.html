@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MESH B-Zabt — باقاتنا المتكاملة</title>
+  <link rel="stylesheet" href="/src/css/main.css" />
+</head>
+<body class="bg-[#F8F9FA]">
+
+  <%- header %>
+
+  <main>
+
+    <!-- ═══════════════ HERO ═══════════════ -->
+    <section class="bg-white py-16 px-4 md:px-6 border-b border-[#e4e2e5]">
+      <div class="w-[93%] mx-auto text-center">
+        <h1 class="font-bold text-4xl md:text-5xl text-[#191C1D] mb-5">
+          باقاتنا المتكاملة
+        </h1>
+        <p class="text-base text-[#44474D] leading-relaxed max-w-2xl mx-auto">
+          حلول رقمية وأكاديمية متكاملة مصممة بدقة لتلبية احتياجات كل فئة، اختر الباقة التي تناسب متطلباتك.
+        </p>
+      </div>
+    </section>
+
+    <!-- ═══════════════ TABS ═══════════════ -->
+    <section class="bg-white px-4 md:px-6 border-b border-[#e4e2e5]">
+      <div class="w-[93%] mx-auto">
+        <div class="flex items-center justify-center gap-2 overflow-x-auto">
+          <button class="packages-tab is-active px-8 py-5 font-bold text-sm whitespace-nowrap border-b-2 border-[#286570] text-[#286570] transition-all duration-200"
+                  data-tab="business">الأعمال</button>
+          <button class="packages-tab px-8 py-5 font-bold text-sm whitespace-nowrap border-b-2 border-transparent text-[#44474D] hover:text-[#286570] transition-all duration-200"
+                  data-tab="institutions">المؤسسات</button>
+          <button class="packages-tab px-8 py-5 font-bold text-sm whitespace-nowrap border-b-2 border-transparent text-[#44474D] hover:text-[#286570] transition-all duration-200"
+                  data-tab="academic">الأكاديمي</button>
+          <button class="packages-tab px-8 py-5 font-bold text-sm whitespace-nowrap border-b-2 border-transparent text-[#44474D] hover:text-[#286570] transition-all duration-200"
+                  data-tab="school">التعليم</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════ PACKAGES ═══════════════ -->
+    <%- packages %>
+
+    <!-- ═══════════════ WHY US SECTIONS ═══════════════ -->
+    <div id="why-business"     class="why-section hidden"> <%- whyBusiness %>     </div>
+    <div id="why-institutions" class="why-section hidden"> <%- whyInstitutions %> </div>
+    <div id="why-academic"     class="why-section hidden"> <%- whyAcademic %>     </div>
+    <div id="why-school"       class="why-section hidden"> <%- whySchool %>       </div>
+
+
+    
+    <!-- ══════ Call to Action ═══════ -->
+    <section class="flex justify-center py-14 p-6">
+  <div class="bg-gradient-to-r from-slate-900 to-teal-900 text-white rounded-2xl p-10 md:p-16 max-w-7xl w-full text-center shadow-xl">
+    
+    <h2 class="text-3xl md:text-4xl font-bold mb-6">
+      لم تجد الباقة المناسبة؟
+    </h2>
+    
+    <p class="text-lg md:text-md px-15 text-slate-200 mb-10">
+      نحن نقدم حلولاً مفصلة بالكامل (Tailor-made) تناسب متطلباتك الخاصة بدقة متناهية.
+    </p>
+    
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      <button class="bg-white text-slate-900 px-8 py-3 rounded-full font-semibold hover:bg-slate-200 transition-colors">
+        تواصل معنا الآن
+      </button>
+      <button class="border border-slate-500 px-8 py-3 rounded-full font-semibold hover:bg-white/10 transition-colors">
+        تصفح كافة الخدمات
+      </button>
+    </div>
+    
+  </div>
+</section>
+
+  </main>
+
+  <%- footer %>
+
+  <script type="module" src="/src/js/main.js"></script>
+</body>
+</html>
+

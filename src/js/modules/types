@@ -1,0 +1,28 @@
+import { updatePackagesUI } from './packages.js';
+// استورد دالة تحديث السكشن الآخر هنا
+
+export function initTabs() {
+  const buttons = document.querySelectorAll('.tab-btn');
+  const sections = document.querySelectorAll('.section-container');
+
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const targetTab = btn.dataset.tab;
+
+      // 1. تحديث الأزرار
+      buttons.forEach(b => b.classList.replace('bg-[#286570]', 'bg-gray-200'));
+      btn.classList.replace('bg-gray-200', 'bg-[#286570]');
+
+      // 2. تحديث السكاشن
+      sections.forEach(sec => {
+        if (sec.dataset.tabContent === targetTab) {
+          sec.style.display = 'block';
+          // هنا نقوم بتحديث السكشن المعروض
+          updatePackagesUI(sec, targetTab);
+        } else {
+          sec.style.display = 'none';
+        }
+      });
+    });
+  });
+}

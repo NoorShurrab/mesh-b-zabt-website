@@ -18,13 +18,11 @@ export function initSteps() {
     ${data.subtitle ? `<p class="text-base text-[#44474D]">${data.subtitle}</p>` : ''}
   `
 
-  // حساب عدد العناصر ديناميكياً لتحديد أعمدة الشاشات الكبيرة
   const stepsCount = data.steps.length
   
-  // إزالة أي كلاسات أعمدة سابقة قد تكون عالقة
   grid.classList.remove('md:grid-cols-3', 'lg:grid-cols-4', 'lg:grid-cols-5')
   
-  // تطبيق الأعمدة بناءً على العدد
+  
   if (stepsCount === 5) {
     grid.classList.add('md:grid-cols-3', 'lg:grid-cols-5')
   } else {
