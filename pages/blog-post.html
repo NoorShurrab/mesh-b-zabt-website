@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- BLADE: <title>{{ $post->title }} — MESH B-Zabt</title> -->
+  <title>مستقبل التحول الرقمي في المؤسسات التعليمية — MESH B-Zabt</title>
+  <link rel="stylesheet" href="/src/css/main.css" />
+</head>
+<body class="bg-[#F8F9FA]">
+
+  <%- header %>
+
+  <main class="py-12 px-4 md:px-6">
+    <div class="w-[90%] mx-auto">
+
+      <!-- ═══════════════ BREADCRUMB ═══════════════ -->
+      <!-- BLADE: تحول لـ breadcrumb component -->
+      <nav class="flex items-center gap-2 text-sm text-[#9CA3AF] mb-8 flex-wrap">
+        <a href="/"               class="hover:text-[#286570] transition-colors">الرئيسية</a>
+        <span>/</span>
+        <a href="/pages/blog.html" class="hover:text-[#286570] transition-colors">المدونة</a>
+        <span>/</span>
+        <!-- BLADE: <span class="text-[#44474D]">{{ $post->title }}</span> -->
+        <span class="text-[#44474D]">مستقبل التحول الرقمي في المؤسسات التعليمية</span>
+      </nav>
+
+      <!-- ═══════════════ LAYOUT: CONTENT + SIDEBAR ═══════════════ -->
+      <div class="grid grid-cols-1 lg:grid-cols-[1fr_350px] gap-18 items-start">
+
+        <!-- ─── MAIN CONTENT ─── -->
+        <article>
+
+          <!-- Category Badge -->
+          <!-- BLADE: <span>{{ $post->category->name }}</span> -->
+          <span class="inline-block bg-[#E8F4F5] text-[#286570] text-xs font-bold px-4 py-1.5 rounded-full mb-5">
+            التحول الرقمي
+          </span>
+
+          <!-- Title -->
+          <!-- BLADE: <h1>{{ $post->title }}</h1> -->
+          <h1 class="font-bold text-9xl pl-60 md:text-4xl text-[#191C1D] leading-tight mb-6 text-right">
+            مستقبل التحول الرقمي في المؤسسات التعليمية: رؤية 2030
+          </h1>
+
+          <!-- Author + Date + Actions -->
+          <div class="flex items-center justify-between flex-wrap gap-4 mb-8 py-4 border-t border-b border-[#e4e2e5]">
+
+            <!-- Author -->
+            <div class="flex items-center gap-3">
+              <!-- BLADE: <img src="{{ $post->author->avatar }}"> -->
+              <div class="w-12 h-12 rounded-full bg-gradient-to-br from-[#286570] to-[#3aa8a6] flex items-center justify-center shrink-0">
+                <span class="font-bold text-white text-lg">أ</span>
+              </div>
+              <div class="text-right">
+                <!-- BLADE: <p>{{ $post->author->name }}</p> -->
+                <p class="font-bold text-sm text-[#1A2B48]">د. أحمد الشمراني</p>
+                <!-- BLADE: <p>{{ $post->author->title }}</p> -->
+                <p class="text-xs text-[#9CA3AF]">خبير التعلم الرقمية</p>
+              </div>
+
+              <!-- Date -->
+              <div class="text-right border-r border-[#e4e2e5] pr-4">
+                <p class="text-xs text-[#9CA3AF]">تاريخ النشر</p>
+                <!-- BLADE: <p>{{ $post->created_at->format('d F Y') }}</p> -->
+                <p class="text-sm font-bold text-[#1A2B48]">24 أكتوبر 2023</p>
+              </div>
+            </div>
+
+            <!-- Date + Actions -->
+            <div class="flex items-center gap-4">
+              <!-- Share -->
+              <button class="w-9 h-9 rounded-lg border border-[#e4e2e5] flex items-center justify-center hover:bg-[#F8F9FA] transition-colors"
+                      aria-label="مشاركة">
+                <svg class="w-4 h-4 text-[#44474D]" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+                  <circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/>
+                  <path d="M8.59 13.51l6.83 3.98M15.41 6.51l-6.82 3.98"/>
+                </svg>
+              </button>
+              <!-- Bookmark -->
+              <button class="w-9 h-9 rounded-lg border border-[#e4e2e5] flex items-center justify-center hover:bg-[#F8F9FA] transition-colors"
+                      aria-label="حفظ">
+                <svg class="w-4 h-4 text-[#44474D]" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"/>
+                </svg>
+              </button>
+              
+            </div>
+
+          </div>
+
+          <!-- Featured Image -->
+          <!-- BLADE: <img src="{{ $post->featured_image }}" alt="{{ $post->title }}"> -->
+          <img src="/public/assets/images/blog/blog1.png"
+               alt="مستقبل التحول الرقمي"
+               class="w-full h-auto object-cover rounded-2xl mb-10"/>
+
+          <!-- ─── Article Body ─── -->
+          <!-- BLADE: {!! $post->content !!} -->
+          <div class="prose-article text-right">
+
+            <p class="text-base text-[#44474D] leading-relaxed mb-6">
+              يعد التحول الرقمي في التعليم أكثر من مجرد إدخال التقنيات الحديثة إلى الفصول الدراسية؛ إنه إعادة صياغة شاملة للعملية التعليمية بأكملها لضمان تجربة تعليمية أكثر معنوية وتفاعلية.
+            </p>
+
+            <h2 class="font-bold text-2xl text-[#191C1D] mb-4 mt-8">
+              لماذا التحول الرقمي الآن؟
+            </h2>
+
+            <p class="text-base text-[#44474D] leading-relaxed mb-6">
+              تواجه المؤسسات التعليمية اليوم تحديات غير مسبوقة تطلب استجابة سريعة ومرنة. التحول الرقمي يوفر الأدوات اللازمة لتحليل البيانات، وتخصيص التعلم، وكسر الحواجز الجغرافية والزمنية التي كانت تعيق وصول المعرفة.
+            </p>
+
+            <ul class="flex flex-col gap-3 mb-6 list-none">
+              <li class="flex items-center gap-3">
+                <svg class="w-5 h-5 text-[#286570] shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>
+                </svg>
+                <span class="text-base text-[#44474D]">تحسين كفاءة الإدارة التعليمية من الشامل</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <svg class="w-5 h-5 text-[#286570] shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>
+                </svg>
+                <span class="text-base text-[#44474D]">توفير بيئات تعلم تفاعلية تشجع على الابتكار</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <svg class="w-5 h-5 text-[#286570] shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>
+                </svg>
+                <span class="text-base text-[#44474D]">تسهيل عملية تقييم الطلاب ومتابعة تقدمهم بدقة</span>
+              </li>
+            </ul>
+
+            <!-- Blockquote -->
+            <blockquote class="border-r-4 border-[#286570] pr-6 py-2 my-8 bg-[#F8F9FA] rounded-l-xl">
+              <p class="text-lg font-bold text-[#1A2B48] leading-relaxed italic">
+                "التعليم هو السلاح الأقوى الذي يمكنك استخدامه لتغيير العالم، والتقنية هي المحرك الذي سيجعل هذا السلاح متاحاً للجميع بلا استثناء"
+              </p>
+            </blockquote>
+
+            <h2 class="font-bold text-2xl text-[#191C1D] mb-4 mt-8">
+              البيئات التعليمية الذكية
+            </h2>
+
+            <p class="text-base text-[#44474D] leading-relaxed mb-6">
+              في حقبة ما بعد الرقمية، تعمل على تطوير حلول برمجية متكاملة تدمج بين الأجهزة البرمجية والبيئة الفيزيائية لخلق ما نسميه "الفصل الدراسي الذكي"، حيث يتم التكيف التلقائي مع كل طالب من خلال الإضافة إلى المحتوى التعليمي عبر أنظمة مركزية ذكية.
+            </p>
+
+          </div>
+          <!-- BLADE: end {!! $post->content !!} -->
+
+          <!-- Share Bar -->
+          <div class="flex items-center justify-between flex-wrap gap-4 mt-10 pt-8 border-t border-[#e4e2e5]">
+            <div class="flex items-center gap-3">
+              <!-- BLADE: social share links -->
+              <a href="#" class="px-5 py-2 rounded-lg bg-[#1877F2] text-white text-sm font-bold hover:opacity-90 transition-opacity">فيسبوك</a>
+              <a href="#" class="px-5 py-2 rounded-lg bg-[#000000] text-white text-sm font-bold hover:opacity-90 transition-opacity">نوفر</a>
+              <a href="#" class="px-5 py-2 rounded-lg bg-[#0A66C2] text-white text-sm font-bold hover:opacity-90 transition-opacity">لينكد إن</a>
+            </div>
+            <p class="text-sm font-bold text-[#1A2B48]">شارك هذا المقال مع زملائك:</p>
+          </div>
+
+        </article>
+
+        <!-- ─── SIDEBAR ─── -->
+        <aside class="flex flex-col gap-6">
+
+          <!-- Related Posts -->
+          <div class="bg-white rounded-2xl border border-[#e4e2e5] p-6">
+            <h3 class="font-bold text-base text-[#1A2B48] mb-5 text-right border-r-4 border-[#286570] pr-3">
+              مقالات ذات صلة
+            </h3>
+
+            <!-- BLADE: @foreach($relatedPosts as $related) -->
+            <div class="flex flex-col gap-4">
+
+              <a href="#" class="flex items-center gap-3 group">
+                <!-- BLADE: <img src="{{ $related->thumbnail }}"> -->
+                <img src="/public/assets/images/blog/otherBlog1.jpg"
+                     alt="مقال ذو صلة"
+                     class="w-16 h-16 rounded-xl object-cover shrink-0"/>
+                <div class="text-right flex-1">
+                  <!-- BLADE: <p>{{ $related->title }}</p> -->
+                  <p class="text-sm font-bold text-[#1A2B48] leading-snug group-hover:text-[#286570] transition-colors line-clamp-2">
+                    كيف تختار نظام التعليم الأنسب...
+                  </p>
+                  <!-- BLADE: <p>{{ $related->created_at->format('d F Y') }}</p> -->
+                  <p class="text-xs text-[#9CA3AF] mt-1">12 أكتوبر 2023</p>
+                </div>
+              </a>
+
+              <a href="#" class="flex items-center gap-3 group">
+                <img src="/public/assets/images/blog/otherBlog2.jpg"
+                     alt="مقال ذو صلة"
+                     class="w-16 h-16 rounded-xl object-cover shrink-0"/>
+                <div class="text-right flex-1">
+                  <p class="text-sm font-bold text-[#1A2B48] leading-snug group-hover:text-[#286570] transition-colors line-clamp-2">
+                    أمن المعلومات في الأنظمة التعليمية...
+                  </p>
+                  <p class="text-xs text-[#9CA3AF] mt-1">5 أكتوبر 2023</p>
+                </div>
+              </a>
+
+              <a href="#" class="flex items-center gap-3 group">
+                <img src="/public/assets/images/blog/otherBlog3.jpg"
+                     alt="مقال ذو صلة"
+                     class="w-16 h-16 rounded-xl object-cover shrink-0"/>
+                <div class="text-right flex-1">
+                  <p class="text-sm font-bold text-[#1A2B48] leading-snug group-hover:text-[#286570] transition-colors line-clamp-2">
+                    دور الذكاء الاصطناعي في تقييم أداء الطلاب...
+                  </p>
+                  <p class="text-xs text-[#9CA3AF] mt-1">26 سبتمبر 2023</p>
+                </div>
+              </a>
+
+            </div>
+            <!-- BLADE: @endforeach -->
+          </div>
+
+          <!-- Newsletter -->
+          <div class="bg-gradient-to-br from-[#1A2B48] to-[#286570] rounded-2xl p-6 text-right">
+            <h3 class="font-bold text-base text-white mb-2">اشتركي نشرتنا الإخبارية</h3>
+            <p class="text-xs text-white/70 mb-5 leading-relaxed">
+              كن أول من يعرف عن أحدث الحلول الرقمية والتعليمية التي تقدمها.
+            </p>
+            <div class="flex flex-col gap-3">
+              <input
+                type="email"
+                placeholder="البريد الإلكتروني"
+                class="w-full px-4 py-3 rounded-xl bg-white/10 text-white text-sm placeholder:text-white/50 outline-none border border-white/20 focus:border-white/50 transition-colors text-right"
+                dir="rtl"
+              />
+              <button class="w-full py-3 rounded-xl bg-white text-[#1A2B48] font-bold text-sm hover:bg-white/90 transition-colors">
+                اشترك الآن
+              </button>
+            </div>
+          </div>
+
+        </aside>
+
+      </div>
+    </div>
+  </main>
+
+
+  <!-- ═══════════════ CTA ═══════════════ -->
+  <section class="px-4 md:px-6 pb-16 mt-8">
+    <div class="w-[93%] mx-auto rounded-2xl overflow-hidden"
+         style="background: linear-gradient(135deg, #1A2B48 0%, #286570 100%)">
+      <div class="px-8 md:px-16 py-16 text-center">
+        <h2 class="font-bold text-3xl md:text-4xl text-white mb-5">
+          مستعد لبدء الرحلة التعليمية؟
+        </h2>
+        <p class="text-base text-white/75 leading-relaxed mb-10 max-w-xl mx-auto">
+          انضم إلى آلاف الطلاب الذين غيروا نظرتهم للتعليم وحققوا نتائج مبهرة معنا. مقعدك في المستقبل بينتظرك.
+        </p>
+        <div class="flex flex-wrap gap-4 justify-center">
+          <a href="/pages/contact.html"
+             class="btn-gradient px-10 py-4 rounded-xl font-bold text-sm">
+            احجز حصة الآن
+          </a>
+          <a href="/pages/contact.html"
+             class="px-10 py-4 rounded-xl font-bold text-sm border-2 border-white/60 text-white hover:bg-white/10 transition-all duration-200">
+            تواصل مع مستشار تعليمي
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <%- footer %>
+
+  <script type="module" src="/src/js/main.js"></script>
+</body>
+</html>

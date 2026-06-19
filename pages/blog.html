@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MESH B-Zabt — المدونة</title>
+  <link rel="stylesheet" href="/src/css/main.css" />
+</head>
+<body class="bg-[#F8F9FA]">
+
+  <%- header %>
+
+  <main>
+
+    <!-- ═══════════════ HERO ═══════════════ -->
+    <section class="bg-gray py-16 px-4 md:px-6 ">
+      <div class="w-[93%] mx-auto text-center">
+        <h1 class="font-bold text-4xl md:text-5xl text-[#191C1D] mb-5">
+          مدونة MESH B-Zabt
+        </h1>
+        <p class="text-base text-[#44474D] leading-relaxed max-w-2xl mx-auto">
+          استكشف أحدث المقالات والرؤى حول تقنيات التعليم الحديثة، وحلول التحول الرقمي
+          التي تقود مستقبل المعرفة في العالم العربي.
+        </p>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════ FILTER + SEARCH + GRID ═══════════════ -->
+    <section class="py-12 px-4 md:px-6">
+      <div class="w-[93%] mx-auto">
+
+        <!-- Filter + Search Row -->
+        <div class="flex flex-col md:flex-row items-center justify-between gap-4 mb-12">
+
+             <!-- Search -->
+          <!-- BLADE: action="{{ route('blog.search') }}" -->
+          <div class="relative w-full md:w-72">
+            <input
+              type="text"
+              placeholder="ابحث عن مقال..."
+              class="w-full pr-10 pl-4 py-3 rounded-xl border border-[#e4e2e5] bg-white text-sm text-[#1A2B48] placeholder:text-[#9CA3AF] outline-none focus:border-[#286570] transition-colors text-right"
+              id="blog-search"
+            />
+            <svg class="absolute top-1/2 right-3 -translate-y-1/2 w-4 h-4 text-[#9CA3AF]"
+                 fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+            </svg>
+          </div>
+          <!-- Filter Tabs -->
+          <!-- BLADE: tabs لـ @foreach($categories as $cat) -->
+          <div class="flex flex-wrap gap-2">
+            <button class="blog-filter-tab is-active px-5 py-2 rounded-full text-sm font-bold bg-[#1A2B48] text-white transition-all duration-200"
+                    data-filter-tab="all">الكل</button>
+            <button class="blog-filter-tab px-5 py-2 rounded-full text-sm font-bold border border-[#e4e2e5] bg-white text-[#1A2B48] hover:bg-[#1A2B48] hover:text-white transition-all duration-200"
+                    data-filter-tab="digital">التحول الرقمي</button>
+            <button class="blog-filter-tab px-5 py-2 rounded-full text-sm font-bold border border-[#e4e2e5] bg-white text-[#1A2B48] hover:bg-[#1A2B48] hover:text-white transition-all duration-200"
+                    data-filter-tab="edu">تقنيات التعليم</button>
+            <button class="blog-filter-tab px-5 py-2 rounded-full text-sm font-bold border border-[#e4e2e5] bg-white text-[#1A2B48] hover:bg-[#1A2B48] hover:text-white transition-all duration-200"
+                    data-filter-tab="content">تطوير المحتوى</button>
+            <button class="blog-filter-tab px-5 py-2 rounded-full text-sm font-bold border border-[#e4e2e5] bg-white text-[#1A2B48] hover:bg-[#1A2B48] hover:text-white transition-all duration-200"
+                    data-filter-tab="ai">ذكاء اصطناعي</button>
+          </div>
+
+         
+
+        </div>
+
+        <!-- Blog Cards Grid -->
+        <!-- BLADE: @foreach($posts as $post) -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6" id="blog-grid">
+
+          <!-- Card 4 -->
+          <article class="bg-white rounded-2xl overflow-hidden border border-[#e4e2e5] hover:shadow-lg transition-all duration-300 flex flex-col"
+                   data-category="edu">
+            <div class="relative">
+              <img src="/public/assets/images/blog/blog4.png"
+                   alt="مستقبل التحول الرقمي"
+                   class="w-full h-44 object-cover"/>
+              <span class="absolute top-3 right-3 bg-[#286570] text-white text-xs font-bold px-3 py-1 rounded-full">
+                تقنيات التعليم
+              </span>
+            </div>
+            <div class="p-5 pl-12 text-right flex flex-col flex-1">
+              <p class="text-[14px] text-xs text-[#9CA3AF] mb-2 flex items-center justify-center gap-1">
+                <span>12 مايو 2024</span>
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                </svg>
+              </p>
+              <h3 class="font-bold pl-14 text-lg text-[#1A2B48] mb-2 leading-snug">
+                مستقبل التحول الرقمي للمؤسسات
+              </h3>
+              <span class="text-[70px] text-bold font-bold self-center pt-2 pb-4"><svg width="28" height="6" viewBox="0 0 28 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M21.6419 5.91992V-7.82013e-05H27.2419V5.91992H21.6419ZM0.00187504 5.91992V-7.82013e-05H5.56188V5.91992H0.00187504ZM10.8019 5.91992V-7.82013e-05H16.4019V5.91992H10.8019Z" fill="#031632"/>
+</svg>
+</span>
+              <p class=" text-[#44474D] leading-relaxed mb-4 flex-1">
+                كيف يساهم الواقع المعزز والافتراضي في تغيير تجربة التعلم التقليدية وجعلها أكثر تفاعلاً...
+              </p>
+              <a href="/pages/blog-post.html" class="text-sm font-bold text-[#2EC4B6] hover:underline flex items-center justify-start gap-2">
+                اقرأ المزيد
+                <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M2.23125 5.25L5.49792 8.51667L4.66667 9.33333L0 4.66667L4.66667 0L5.49792 0.816667L2.23125 4.08333H9.33333V5.25H2.23125Z" fill="url(#paint0_linear_249_924)"/>
+<defs>
+<linearGradient id="paint0_linear_249_924" x1="4.66667" y1="0" x2="4.66667" y2="9.33333" gradientUnits="userSpaceOnUse">
+<stop stop-color="#2EC4B6"/>
+<stop offset="1" stop-color="#1F8A8A"/>
+</linearGradient>
+</defs>
+</svg>
+
+              </a>
+            </div>
+          </article>
+
+          
+          <!-- Card 3 -->
+          <article class="bg-white rounded-2xl overflow-hidden border border-[#e4e2e5] hover:shadow-lg transition-all duration-300 flex flex-col"
+                   data-category="digital">
+            <div class="relative">
+              <img src="/public/assets/images/blog/blog3.png"
+                   alt="دليل شامل للتحول"
+                   class="w-full h-44 object-cover"/>
+              <span class="absolute top-3 right-3 bg-[#286570] text-white text-xs font-bold px-3 py-1 rounded-full">
+                التحول الرقمي
+              </span>
+            </div>
+            <div class="p-5 pl-16 text-right flex flex-col flex-1">
+              <p class="text-[14px] text-xs text-[#9CA3AF] mb-2 flex items-center justify-center gap-1">
+                <span>08 مايو 2024</span>
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                </svg>
+              </p>
+              <h3 class="font-bold pl-14 text-lg text-[#1A2B48] mb-2 leading-snug">
+                دليل شامل للتحول
+              </h3>
+              <span class="text-[70px] text-bold font-bold self-center pt-2 pb-4"><svg width="28" height="6" viewBox="0 0 28 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M21.6419 5.91992V-7.82013e-05H27.2419V5.91992H21.6419ZM0.00187504 5.91992V-7.82013e-05H5.56188V5.91992H0.00187504ZM10.8019 5.91992V-7.82013e-05H16.4019V5.91992H10.8019Z" fill="#031632"/>
+</svg>
+</span>
+              <p class="text-[15px] text-[#44474D] leading-relaxed mb-4 flex-1">
+                الخطوات الأساسية والتحديات التي تواجه المؤسسات الكبرى عند بناء الحلول الرقمية...
+              </p>
+              <a href="/" class="text-sm font-bold text-[#2EC4B6] hover:underline flex items-center justify-start gap-2">
+                اقرأ المزيد
+                <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M2.23125 5.25L5.49792 8.51667L4.66667 9.33333L0 4.66667L4.66667 0L5.49792 0.816667L2.23125 4.08333H9.33333V5.25H2.23125Z" fill="url(#paint0_linear_249_924)"/>
+<defs>
+<linearGradient id="paint0_linear_249_924" x1="4.66667" y1="0" x2="4.66667" y2="9.33333" gradientUnits="userSpaceOnUse">
+<stop stop-color="#2EC4B6"/>
+<stop offset="1" stop-color="#1F8A8A"/>
+</linearGradient>
+</defs>
+</svg>
+
+              </a>
+            </div>
+          </article>
+
+                    <!-- Card 2 -->
+          <article class="bg-white rounded-2xl overflow-hidden border border-[#e4e2e5] hover:shadow-lg transition-all duration-300 flex flex-col"
+                   data-category="ai">
+            <div class="relative">
+              <img src="/public/assets/images/blog/blog2.png"
+                   alt="كيف يعيد الذكاء"
+                   class="w-full h-44 object-cover"/>
+              <span class="absolute top-3 right-3 bg-[#286570] text-white text-xs font-bold px-3 py-1 rounded-full">
+                ذكاء اصطناعي
+              </span>
+            </div>
+            <div class="p-5 pl-12 text-right flex flex-col flex-1">
+              <p class="text-[14px] text-xs text-[#9CA3AF] mb-2 flex items-center justify-center gap-1">
+                <span>05 مايو 2024</span>
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                </svg>
+              </p>
+              <h3 class="font-bold pl-14 text-lg text-[#1A2B48] mb-2 leading-snug">
+                كيف يعيد الذكاء
+              </h3>
+              <span class="text-[70px] text-bold font-bold self-center pt-2 pb-4"><svg width="28" height="6" viewBox="0 0 28 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M21.6419 5.91992V-7.82013e-05H27.2419V5.91992H21.6419ZM0.00187504 5.91992V-7.82013e-05H5.56188V5.91992H0.00187504ZM10.8019 5.91992V-7.82013e-05H16.4019V5.91992H10.8019Z" fill="#031632"/>
+</svg>
+</span>
+              <p class="text-[15px] text-[#44474D] leading-relaxed mb-4 flex-1">
+                استخدام الخوارزميات المتقدمة في تخصيص رحلة التعلم لكل طالب بناء على مهاراته واحتياجاته...
+              </p>
+              <a href="/" class="text-sm font-bold text-[#2EC4B6] hover:underline flex items-center justify-start gap-2">
+                اقرأ المزيد
+                <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M2.23125 5.25L5.49792 8.51667L4.66667 9.33333L0 4.66667L4.66667 0L5.49792 0.816667L2.23125 4.08333H9.33333V5.25H2.23125Z" fill="url(#paint0_linear_249_924)"/>
+<defs>
+<linearGradient id="paint0_linear_249_924" x1="4.66667" y1="0" x2="4.66667" y2="9.33333" gradientUnits="userSpaceOnUse">
+<stop stop-color="#2EC4B6"/>
+<stop offset="1" stop-color="#1F8A8A"/>
+</linearGradient>
+</defs>
+</svg>
+
+              </a>
+            </div>
+          </article>
+
+          <!-- Card 1 -->
+          <!-- BLADE: data-category="{{ $post->category->slug }}" -->
+          <article class="bg-white rounded-2xl overflow-hidden border border-[#e4e2e5] hover:shadow-lg transition-all duration-300 flex flex-col"
+                   data-category="content">
+            <div class="relative">
+              <!-- BLADE: <img src="{{ $post->thumbnail }}" alt="{{ $post->title }}"> -->
+              <img src="/public/assets/images/blog/blog1.png"
+                   alt="أسرار بناء محتوى"
+                   class="w-full h-44 object-cover"/>
+              <span class="absolute top-3 right-3 bg-[#286570] text-white text-xs font-bold px-3 py-1 rounded-full">
+                تطوير المحتوى
+              </span>
+            </div>
+            <div class="p-5 pl-12 text-right flex flex-col flex-1">
+              <!-- BLADE: {{ $post->created_at->format('d F Y') }} -->
+              <p class="text-[14px] text-[#9CA3AF] mb-2 flex items-center justify-center gap-1">
+                <span>25 أبريل 2024</span>
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                </svg>
+              </p>
+              <!-- BLADE: {{ $post->title }} -->
+              <h3 class="font-bold pl-14 text-lg text-[#1A2B48] mb-2 leading-snug">
+                أسرار بناء محتوى
+              </h3>
+              <span class="text-[70px] text-bold font-bold self-center pt-2 pb-4"><svg width="28" height="6" viewBox="0 0 28 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M21.6419 5.91992V-7.82013e-05H27.2419V5.91992H21.6419ZM0.00187504 5.91992V-7.82013e-05H5.56188V5.91992H0.00187504ZM10.8019 5.91992V-7.82013e-05H16.4019V5.91992H10.8019Z" fill="#031632"/>
+</svg>
+</span>
+              <!-- BLADE: {{ Str::limit($post->excerpt, 80) }} -->
+              <p class="text-[15px] text-[#44474D] leading-relaxed mb-4 flex-1">
+                أفضل الممارسات لإنشاء فيديوهات تعليمية ومحتوى تفاعلي يحقق أعلى مستويات...
+              </p>
+              <!-- BLADE: <a href="{{ route('blog.show', $post->slug) }}"> -->
+              <a href="/" class="text-sm font-bold text-[#2EC4B6] hover:underline flex items-center justify-start gap-2">
+                اقرأ المزيد
+                <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M2.23125 5.25L5.49792 8.51667L4.66667 9.33333L0 4.66667L4.66667 0L5.49792 0.816667L2.23125 4.08333H9.33333V5.25H2.23125Z" fill="url(#paint0_linear_249_924)"/>
+<defs>
+<linearGradient id="paint0_linear_249_924" x1="4.66667" y1="0" x2="4.66667" y2="9.33333" gradientUnits="userSpaceOnUse">
+<stop stop-color="#2EC4B6"/>
+<stop offset="1" stop-color="#1F8A8A"/>
+</linearGradient>
+</defs>
+</svg>
+
+              </a>
+            </div>
+          </article>
+
+        </div>
+        <!-- BLADE: @endforeach -->
+
+        <!-- Pagination -->
+        <!-- BLADE: {{ $posts->links() }} -->
+        <div class="flex items-center justify-center gap-2 mt-12">
+          <button class="w-9 h-9 rounded-lg border border-[#e4e2e5] bg-white flex items-center justify-center hover:bg-[#286570] hover:text-white hover:border-[#286570] transition-all">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
+            </svg>
+          </button>
+          <button class="w-9 h-9 rounded-lg bg-[#286570] text-white font-bold text-sm">1</button>
+          <button class="w-9 h-9 rounded-lg border border-[#e4e2e5] bg-white font-bold text-sm text-[#1A2B48] hover:bg-[#286570] hover:text-white hover:border-[#286570] transition-all">2</button>
+          <button class="w-9 h-9 rounded-lg border border-[#e4e2e5] bg-white font-bold text-sm text-[#1A2B48] hover:bg-[#286570] hover:text-white hover:border-[#286570] transition-all">3</button>
+          <span class="text-[#9CA3AF] text-sm px-1">...</span>
+          <button class="w-9 h-9 rounded-lg border border-[#e4e2e5] bg-white font-bold text-sm text-[#1A2B48] hover:bg-[#286570] hover:text-white hover:border-[#286570] transition-all">12</button>
+          <button class="w-9 h-9 rounded-lg border border-[#e4e2e5] bg-white flex items-center justify-center hover:bg-[#286570] hover:text-white hover:border-[#286570] transition-all">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/>
+            </svg>
+          </button>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ═══════════════ CTA ═══════════════ -->
+    <section class="px-4 md:px-6 pb-16">
+      <div class="w-[93%] mx-auto rounded-2xl overflow-hidden"
+           style="background: linear-gradient(135deg, #1A2B48 0%, #286570 100%)">
+        <div class="px-8 md:px-16 py-16 text-center">
+          <h2 class="font-bold text-3xl md:text-4xl text-white mb-5">
+            مستعد لبدء الرحلة التعليمية؟
+          </h2>
+          <p class="text-base text-white/75 leading-relaxed mb-10 max-w-xl mx-auto">
+            انضم إلى آلاف الطلاب الذين غيروا نظرتهم للتعليم وحققوا نتائج مبهرة معنا. مقعدك في المستقبل بينتظرك.
+          </p>
+          <div class="flex flex-wrap gap-4 justify-center">
+            <a href="/pages/contact.html"
+               class="btn-gradient px-10 py-4 rounded-xl font-bold text-sm">
+              احجز حصة الآن
+            </a>
+            <a href="/pages/contact.html"
+               class="px-10 py-4 rounded-xl font-bold text-sm border-2 border-white/60 text-white hover:bg-white/10 transition-all duration-200">
+              تواصل مع مستشار تعليمي
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <%- footer %>
+
+  <script type="module" src="/src/js/main.js"></script>
+</body>
+</html>
