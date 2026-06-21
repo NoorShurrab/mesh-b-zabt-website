@@ -5,15 +5,14 @@ export function initPrivacy() {
   if (!sections.length || !links.length) return;
 
   const setActive = (id) => {
-  console.log("ACTIVE:", id);
+    links.forEach((link) => {
+      link.classList.remove("active");
 
-  links.forEach((link) => {
-    link.classList.toggle(
-      "active",
-      link.dataset.tocLink === id
-    );
-  });
-};
+      if (link.dataset.tocLink === id) {
+        link.classList.add("active");
+      }
+    });
+  };
 
   const observer = new IntersectionObserver(
     (entries) => {
@@ -30,13 +29,12 @@ export function initPrivacy() {
       }
     },
     {
-      threshold: 0.5,
+      rootMargin: "-25% 0px -55% 0px",
+      threshold: 0,
     }
   );
 
-  sections.forEach((section) => {
-    observer.observe(section);
-  });
+  sections.forEach((section) => observer.observe(section));
 
   links.forEach((link) => {
     link.addEventListener("click", () => {
