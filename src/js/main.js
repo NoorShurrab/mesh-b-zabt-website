@@ -12,7 +12,7 @@ import { initReviews } from './modules/reviews.js'
 import { initFaq } from './modules/faq.js'
 import { initGallery } from './modules/gallery.js';
 import { initTeam } from './modules/team.js';
-// import { initPrivacy } from './modules/privacy.js'
+import { initPrivacy } from './modules/privacy.js'
 
 document.addEventListener('DOMContentLoaded', () => {
   initNav()
@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initFaq()
   initGallery()
   initTeam()
-  // initPrivacy()
+  initPrivacy()
   
 
 })

@@ -107,3 +107,22 @@ body { overflow-x: hidden; }
 
 /* ─── PORTFOLIO FILTER ────────────────────────────────────────── */
 .portfolio-case.hidden { display: none; }
+
+/* ──── Privacy Policies───────────────────────────────────────────────────── */
+.privacy-link {
+  display: block;
+  padding: 8px 12px;
+  border-radius: 10px;
+  color: #64748b;
+  transition: all .3s;
+}
+
+.privacy-link.active {
+  color: #2ab7ad;
+  font-weight: 700;
+  background: rgba(42,183,173,.08);
+}
+
+.privacy-link:hover {
+  color: #2ab7ad;
+}

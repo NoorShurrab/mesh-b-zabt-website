@@ -69,6 +69,7 @@ export default defineConfig({
         privacy: resolve(__dirname, 'pages/privacy.html'),
         'blog-post': resolve(__dirname, 'pages/blog-post.html'),
         policies: resolve(__dirname, 'pages/policies.html'),
+        terms: resolve(__dirname, 'pages/terms.html'),
       },
     },
   },

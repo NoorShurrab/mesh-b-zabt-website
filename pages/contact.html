@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MESH B-Zabt — تواصل معنا</title>
+  <link rel="stylesheet" href="/src/css/main.css" />
+</head>
+<body class="bg-[#F8F9FA]">
+
+  <%- header %>
+
+  <main>
+
+    <!-- ═══════════════ HERO ═══════════════ -->
+    <section class="relative py-24 px-4 md:px-6 overflow-hidden">
+      <!-- Background -->
+      <div class="absolute inset-0 z-0">
+        <img src="/public/assets/images/contact.png"
+             alt=""
+             class="w-full h-full object-cover"
+             aria-hidden="true"/>
+        <div class="absolute inset-0 bg-[#1A2B48]/75"></div>
+      </div>
+      <!-- Content -->
+      <div class="relative z-10 text-center">
+        <h1 class="font-bold text-4xl md:text-5xl text-white mb-4">
+          تواصل معنا
+        </h1>
+        <p class="text-base text-white/80">
+          نحن هنا لمساعدتكم في رحلتكم نحو التحول الرقمي والتميز الأكاديمي
+        </p>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════ CONTACT SECTION ═══════════════ -->
+    <section class="py-16 px-4 md:px-6">
+      <div class="max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-[1fr_300px] gap-8 items-start">
+
+          
+          <!-- ─── Form  ─── -->
+          <div class="bg-white rounded-2xl border border-[#e4e2e5] p-8">
+
+            <div class="text-right mb-8">
+              <h2 class="font-bold text-3xl text-[#191C1D] mb-2">أرسل طلبك الآن</h2>
+              <p class="text-sm text-[#44474D]">
+                قم بتعبئة البيانات أدناه وسيتواصل معك فريقنا المختص في أقرب وقت
+              </p>
+            </div>
+
+            <!-- BLADE: <form action="{{ route('contact.store') }}" method="POST" enctype="multipart/form-data"> -->
+            <!-- BLADE: @csrf -->
+            <form id="contact-form" novalidate>
+
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-5 mb-5">
+
+                <!-- الاسم -->
+                <div class="flex flex-col gap-1.5">
+                  <label class="text-sm font-bold text-[#1A2B48] text-right" for="name">
+                    الاسم كاملاً
+                  </label>
+                  <input
+                    id="name"
+                    type="text"
+                    name="name"
+                    placeholder="مثال: محمد أحمد"
+                    class="w-full px-4 py-3 rounded-xl border border-[#e4e2e5] text-sm text-[#1A2B48] placeholder:text-[#9CA3AF] outline-none focus:border-[#286570] transition-colors text-right"
+                    required
+                  />
+                </div>
+
+                <!-- رقم الهاتف -->
+                <div class="flex flex-col gap-1.5">
+                  <label class="text-sm font-bold text-[#1A2B48] text-right" for="phone">
+                    رقم الهاتف
+                  </label>
+                  <input
+                    id="phone"
+                    type="tel"
+                    name="phone"
+                    placeholder="+966 5X XXX XXXX"
+                    class="w-full px-4 py-3 rounded-xl border border-[#e4e2e5] text-sm text-[#1A2B48] placeholder:text-[#9CA3AF] outline-none focus:border-[#286570] transition-colors text-right"
+                    dir="ltr"
+                  />
+                </div>
+
+                <!-- البريد الإلكتروني -->
+                <div class="flex flex-col gap-1.5">
+                  <label class="text-sm font-bold text-[#1A2B48] text-right" for="email">
+                    البريد الإلكتروني
+                  </label>
+                  <input
+                    id="email"
+                    type="email"
+                    name="email"
+                    placeholder="example@domain.com"
+                    class="w-full px-4 py-3 rounded-xl border border-[#e4e2e5] text-sm text-[#1A2B48] placeholder:text-[#9CA3AF] outline-none focus:border-[#286570] transition-colors text-right"
+                    dir="ltr"
+                    required
+                  />
+                </div>
+
+                <!-- اختر المسار -->
+                <div class="flex flex-col gap-1.5">
+                  <label class="text-sm font-bold text-[#1A2B48] text-right" for="path">
+                    اختر المسار
+                  </label>
+                  <!-- BLADE: يمكن تحويله لـ @foreach($paths as $path) -->
+                  <select
+                    id="path"
+                    name="path"
+                    class="w-full px-4 py-3 rounded-xl border border-[#e4e2e5] text-sm text-[#1A2B48] outline-none focus:border-[#286570] transition-colors text-right bg-white appearance-none cursor-pointer"
+                  >
+                    <option value="" disabled selected>اختر المسار المناسب</option>
+                    <option value="business">مسار حلول الأعمال الرقمية</option>
+                    <option value="academic">المسار الأكاديمي الجامعي</option>
+                    <option value="institutions">مسار المؤسسات التعليمية</option>
+                    <option value="school">مسار التعليم المدرسي والأطفال</option>
+                  </select>
+                </div>
+
+              </div>
+
+              <!-- الخدمة -->
+              <div class="flex flex-col gap-1.5 mb-5">
+                <label class="text-sm font-bold text-[#1A2B48] text-right" for="service">
+                  الخدمة
+                </label>
+                <input
+                  id="service"
+                  type="text"
+                  name="service"
+                  placeholder="ما هي الخدمة التي تهتم بها؟"
+                  class="w-full px-4 py-3 rounded-xl border border-[#e4e2e5] text-sm text-[#1A2B48] placeholder:text-[#9CA3AF] outline-none focus:border-[#286570] transition-colors text-right"
+                />
+              </div>
+
+              <!-- تفاصيل الطلب -->
+              <div class="flex flex-col gap-1.5 mb-5">
+                <label class="text-sm font-bold text-[#1A2B48] text-right" for="details">
+                  تفاصيل الطلب
+                </label>
+                <textarea
+                  id="details"
+                  name="details"
+                  rows="4"
+                  placeholder="اكتب تفاصيل طلبك هنا..."
+                  class="w-full px-4 py-3 rounded-xl border border-[#e4e2e5] text-sm text-[#1A2B48] placeholder:text-[#9CA3AF] outline-none focus:border-[#286570] transition-colors text-right resize-none"
+                ></textarea>
+              </div>
+
+              <!-- File Upload -->
+              <div class="flex flex-col gap-1.5 mb-8">
+                <label class="text-sm font-bold text-[#1A2B48] text-right">
+                  إرفاق ملف أو صورة
+                </label>
+                <div id="drop-zone"
+                     class="border-2 border-dashed border-[#e4e2e5] rounded-xl p-8 text-center cursor-pointer hover:border-[#286570] transition-colors">
+                  <input type="file"
+                         id="file-input"
+                         name="attachment"
+                         accept=".pdf,.jpg,.jpeg,.png"
+                         class="hidden"/>
+                  <svg class="w-8 h-8 text-[#9CA3AF] mx-auto mb-3" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 13h6m-3-3v6m5 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                  </svg>
+                  <p class="text-sm font-bold text-[#1A2B48] mb-1">انقر للتحميل أو اسحب الملف هنا</p>
+                  <p class="text-xs text-[#9CA3AF]">PDF، JPG، PNG | بحد أقصى 10 ميغابايت</p>
+                  <p id="file-name" class="text-xs text-[#286570] mt-2 hidden"></p>
+                </div>
+              </div>
+
+              <!-- Submit -->
+              <!-- BLADE: يحتاج CSRF token وaction endpoint -->
+              <button
+                type="submit"
+                class="w-full py-4 rounded-xl btn-gradient text-base transition-all duration-200 hover:opacity-90 hover:shadow-2xl cursor-pointer">
+                إرسال الطلب
+              </button>
+
+            </form>
+            <!-- BLADE: </form> -->
+
+          </div>
+
+          <!-- ─── Contact Info ──── -->
+          <div class="flex flex-col gap-5">
+
+            <!-- Info Card -->
+            <div class="bg-white rounded-2xl border border-[#e4e2e5] p-6">
+              <h3 class="font-bold text-xl text-[#2A6671] mb-6 text-right border-r-4 border-[#286570] pr-3">
+                بيانات التواصل
+              </h3>
+
+              <div class="flex flex-col gap-5">
+
+                <!-- Address -->
+                <div class="flex items-start gap-3 flex-row">
+                  <div class="w-9 h-9 rounded-lg bg-[#E8F4F5] flex items-center justify-center shrink-0">
+                    <svg class="w-4 h-4 text-[#286570]" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                    </svg>
+                  </div>
+                  <div class="text-right">
+                    <p class="font-bold text-sm text-[#1A2B48] mb-1">المقر الرئيسي</p>
+                    <p class="text-sm text-[#44474D]">غزة ، فلسطين</p>
+                  </div>
+                </div>
+
+                <!-- Email -->
+                <div class="flex items-start gap-3 flex-row">
+                  <div class="w-9 h-9 rounded-lg bg-[#E8F4F5] flex items-center justify-center shrink-0">
+                    <svg class="w-4 h-4 text-[#286570]" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                    </svg>
+                  </div>
+                  <div class="text-right">
+                    <p class="font-bold text-sm text-[#1A2B48] mb-1">البريد الإلكتروني</p>
+                    <a href="mailto:info@mesh-bzabt.com"
+                       class="text-sm text-[#286570] hover:underline">
+                      info@mesh-bzabt.com
+                    </a>
+                  </div>
+                </div>
+
+                <!-- Phone -->
+                <div class="flex items-start gap-3 flex-row">
+                  <div class="w-9 h-9 rounded-lg bg-[#E8F4F5] flex items-center justify-center shrink-0">
+                    <svg class="w-4 h-4 text-[#286570]" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                    </svg>
+                  </div>
+                  <div class="text-right">
+                    <p class="font-bold text-sm text-[#1A2B48] mb-1">الهاتف</p>
+                    <a href="tel:+97250000000"
+                       class="text-sm text-[#286570] hover:underline" dir="ltr">
+                      +972 50 000 0000
+                    </a>
+                  </div>
+                </div>
+
+                <!-- Divider -->
+                <div class="border-t border-[#e4e2e5] pt-4">
+                  <p class="font-bold text-sm text-[#1A2B48] mb-3 text-right">تابعنا على</p>
+                  <div class="flex gap-2 justify-start mr-10">
+                    <a href="#"
+                       class="w-10 h-10 rounded-full bg-[#F8F9FA] flex items-center justify-center hover:bg-[#286570] group transition-colors"
+                       aria-label="مشاركة">
+                      <svg width="15" height="17" viewBox="0 0 15 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M12.5 16.6667C11.8056 16.6667 11.2153 16.4236 10.7292 15.9375C10.2431 15.4514 10 14.8611 10 14.1667C10 14.0833 10.0208 13.8889 10.0625 13.5833L4.20833 10.1667C3.98611 10.375 3.72917 10.5382 3.4375 10.6562C3.14583 10.7743 2.83333 10.8333 2.5 10.8333C1.80556 10.8333 1.21528 10.5903 0.729167 10.1042C0.243056 9.61806 0 9.02778 0 8.33333C0 7.63889 0.243056 7.04861 0.729167 6.5625C1.21528 6.07639 1.80556 5.83333 2.5 5.83333C2.83333 5.83333 3.14583 5.89236 3.4375 6.01042C3.72917 6.12847 3.98611 6.29167 4.20833 6.5L10.0625 3.08333C10.0347 2.98611 10.0174 2.89236 10.0104 2.80208C10.0035 2.71181 10 2.61111 10 2.5C10 1.80556 10.2431 1.21528 10.7292 0.729167C11.2153 0.243056 11.8056 0 12.5 0C13.1944 0 13.7847 0.243056 14.2708 0.729167C14.7569 1.21528 15 1.80556 15 2.5C15 3.19444 14.7569 3.78472 14.2708 4.27083C13.7847 4.75694 13.1944 5 12.5 5C12.1667 5 11.8542 4.94097 11.5625 4.82292C11.2708 4.70486 11.0139 4.54167 10.7917 4.33333L4.9375 7.75C4.96528 7.84722 4.98264 7.94097 4.98958 8.03125C4.99653 8.12153 5 8.22222 5 8.33333C5 8.44444 4.99653 8.54514 4.98958 8.63542C4.98264 8.72569 4.96528 8.81944 4.9375 8.91667L10.7917 12.3333C11.0139 12.125 11.2708 11.9618 11.5625 11.8438C11.8542 11.7257 12.1667 11.6667 12.5 11.6667C13.1944 11.6667 13.7847 11.9097 14.2708 12.3958C14.7569 12.8819 15 13.4722 15 14.1667C15 14.8611 14.7569 15.4514 14.2708 15.9375C13.7847 16.4236 13.1944 16.6667 12.5 16.6667ZM12.5 15C12.7361 15 12.934 14.9201 13.0938 14.7604C13.2535 14.6007 13.3333 14.4028 13.3333 14.1667C13.3333 13.9306 13.2535 13.7326 13.0938 13.5729C12.934 13.4132 12.7361 13.3333 12.5 13.3333C12.2639 13.3333 12.066 13.4132 11.9062 13.5729C11.7465 13.7326 11.6667 13.9306 11.6667 14.1667C11.6667 14.4028 11.7465 14.6007 11.9062 14.7604C12.066 14.9201 12.2639 15 12.5 15ZM2.5 9.16667C2.73611 9.16667 2.93403 9.08681 3.09375 8.92708C3.25347 8.76736 3.33333 8.56944 3.33333 8.33333C3.33333 8.09722 3.25347 7.89931 3.09375 7.73958C2.93403 7.57986 2.73611 7.5 2.5 7.5C2.26389 7.5 2.06597 7.57986 1.90625 7.73958C1.74653 7.89931 1.66667 8.09722 1.66667 8.33333C1.66667 8.56944 1.74653 8.76736 1.90625 8.92708C2.06597 9.08681 2.26389 9.16667 2.5 9.16667ZM12.5 3.33333C12.7361 3.33333 12.934 3.25347 13.0938 3.09375C13.2535 2.93403 13.3333 2.73611 13.3333 2.5C13.3333 2.26389 13.2535 2.06597 13.0938 1.90625C12.934 1.74653 12.7361 1.66667 12.5 1.66667C12.2639 1.66667 12.066 1.74653 11.9062 1.90625C11.7465 2.06597 11.6667 2.26389 11.6667 2.5C11.6667 2.73611 11.7465 2.93403 11.9062 3.09375C12.066 3.25347 12.2639 3.33333 12.5 3.33333Z" fill="url(#paint0_linear_317_745)"/>
+<defs>
+<linearGradient id="paint0_linear_317_745" x1="0" y1="8.33333" x2="15" y2="8.33333" gradientUnits="userSpaceOnUse">
+<stop stop-color="#2EC4B6"/>
+<stop offset="1" stop-color="#1F8A8A"/>
+</linearGradient>
+</defs>
+</svg>
+
+                    </a>
+                    <a href="#"
+                       class="w-10 h-10 rounded-full bg-[#F8F9FA] flex items-center justify-center hover:bg-[#286570] group transition-colors"
+                       aria-label="شبكة">
+                      <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M8.33333 16.6667C7.18056 16.6667 6.09722 16.4479 5.08333 16.0104C4.06944 15.5729 3.1875 14.9792 2.4375 14.2292C1.6875 13.4792 1.09375 12.5972 0.65625 11.5833C0.21875 10.5694 0 9.48611 0 8.33333C0 7.18056 0.21875 6.09722 0.65625 5.08333C1.09375 4.06944 1.6875 3.1875 2.4375 2.4375C3.1875 1.6875 4.06944 1.09375 5.08333 0.65625C6.09722 0.21875 7.18056 0 8.33333 0C9.48611 0 10.5694 0.21875 11.5833 0.65625C12.5972 1.09375 13.4792 1.6875 14.2292 2.4375C14.9792 3.1875 15.5729 4.06944 16.0104 5.08333C16.4479 6.09722 16.6667 7.18056 16.6667 8.33333C16.6667 9.48611 16.4479 10.5694 16.0104 11.5833C15.5729 12.5972 14.9792 13.4792 14.2292 14.2292C13.4792 14.9792 12.5972 15.5729 11.5833 16.0104C10.5694 16.4479 9.48611 16.6667 8.33333 16.6667ZM7.5 14.9583V13.3333C7.04167 13.3333 6.64931 13.1701 6.32292 12.8438C5.99653 12.5174 5.83333 12.125 5.83333 11.6667V10.8333L1.83333 6.83333C1.79167 7.08333 1.75347 7.33333 1.71875 7.58333C1.68403 7.83333 1.66667 8.08333 1.66667 8.33333C1.66667 10.0139 2.21875 11.4861 3.32292 12.75C4.42708 14.0139 5.81944 14.75 7.5 14.9583ZM13.25 12.8333C13.8194 12.2083 14.2535 11.5104 14.5521 10.7396C14.8507 9.96875 15 9.16667 15 8.33333C15 6.97222 14.6215 5.72917 13.8646 4.60417C13.1076 3.47917 12.0972 2.66667 10.8333 2.16667V2.5C10.8333 2.95833 10.6701 3.35069 10.3438 3.67708C10.0174 4.00347 9.625 4.16667 9.16667 4.16667H7.5V5.83333C7.5 6.06944 7.42014 6.26736 7.26042 6.42708C7.10069 6.58681 6.90278 6.66667 6.66667 6.66667H5V8.33333H10C10.2361 8.33333 10.434 8.41319 10.5938 8.57292C10.7535 8.73264 10.8333 8.93056 10.8333 9.16667V11.6667H11.6667C12.0278 11.6667 12.3542 11.7743 12.6458 11.9896C12.9375 12.2049 13.1389 12.4861 13.25 12.8333Z" fill="url(#paint0_linear_317_741)"/>
+<defs>
+<linearGradient id="paint0_linear_317_741" x1="0" y1="8.33333" x2="16.6667" y2="8.33333" gradientUnits="userSpaceOnUse">
+<stop stop-color="#2EC4B6"/>
+<stop offset="1" stop-color="#1F8A8A"/>
+</linearGradient>
+</defs>
+</svg>
+
+                    </a>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- Map -->
+            <div class="bg-white rounded-2xl border border-[#e4e2e5] overflow-hidden">
+              <!-- BLADE: يمكن استبداله بـ Google Maps embed -->
+              <div class="relative h-48 bg-[#E8F4F5]">
+                <img src="/public/assets/images/map-placeholder.png"
+                     alt="الموقع الجغرافي"
+                     class="w-full h-full object-cover opacity-70"/>
+                <a href="https://maps.google.com"
+                   target="_blank"
+                   rel="noopener"
+                   class="absolute bottom-3 left-1/2 -translate-x-1/2 bg-white/90 text-[#1A2B48] text-xs font-bold px-4 py-2 rounded-full hover:bg-[#286570] hover:text-white transition-colors whitespace-nowrap">
+                  عرض الموقع الجغرافي
+                </a>
+              </div>
+            </div>
+
+          </div>
+
+
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <%- footer %>
+
+  <script type="module" src="/src/js/main.js"></script>
+
+  <!-- File Upload + Form JS -->
+  <script>
+    // ─── File Upload ───────────────────────────────────
+    const dropZone  = document.getElementById('drop-zone')
+    const fileInput = document.getElementById('file-input')
+    const fileName  = document.getElementById('file-name')
+
+    dropZone?.addEventListener('click', () => fileInput.click())
+
+    fileInput?.addEventListener('change', () => {
+      const file = fileInput.files[0]
+      if (file) {
+        fileName.textContent = `✓ ${file.name}`
+        fileName.classList.remove('hidden')
+        dropZone.classList.add('border-[#286570]')
+      }
+    })
+
+    dropZone?.addEventListener('dragover', e => {
+      e.preventDefault()
+      dropZone.classList.add('border-[#286570]', 'bg-[#E8F4F5]')
+    })
+
+    dropZone?.addEventListener('dragleave', () => {
+      dropZone.classList.remove('bg-[#E8F4F5]')
+    })
+
+    dropZone?.addEventListener('drop', e => {
+      e.preventDefault()
+      dropZone.classList.remove('bg-[#E8F4F5]')
+      const file = e.dataTransfer.files[0]
+      if (file) {
+        fileInput.files = e.dataTransfer.files
+        fileName.textContent = `✓ ${file.name}`
+        fileName.classList.remove('hidden')
+        dropZone.classList.add('border-[#286570]')
+      }
+    })
+
+    // ─── Form Validation ───────────────────────────────
+    // BLADE: هاد بيتشال لأن Laravel بيتولى الـ validation
+    document.getElementById('contact-form')?.addEventListener('submit', e => {
+      e.preventDefault()
+      const name  = document.getElementById('name').value.trim()
+      const email = document.getElementById('email').value.trim()
+      if (!name || !email) {
+        alert('يرجى تعبئة الاسم والبريد الإلكتروني')
+        return
+      }
+      // BLADE: form.submit() أو fetch للـ API
+      alert('تم إرسال طلبك بنجاح! سنتواصل معك قريباً.')
+    })
+  </script>
+
+</body>
+</html>
