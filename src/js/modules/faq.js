@@ -21,13 +21,14 @@ export function initFaq() {
     <div class="faq-item bg-white rounded-xl border border-[#e4e2e5] overflow-hidden">
       <button class="faq-question w-full flex items-center justify-between gap-4 px-6 py-5 text-right"
               aria-expanded="false">
+        
+        <span class="font-bold text-sm md:text-base text-[#1A2B48] flex-1 text-right">
+          ${item.q}
+        </span>
         <svg class="faq-question__icon w-5 h-5 text-[#286570] shrink-0 transition-transform duration-300"
              fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/>
         </svg>
-        <span class="font-bold text-sm md:text-base text-[#1A2B48] flex-1 text-right">
-          ${item.q}
-        </span>
       </button>
       <div class="faq-answer">
         <p class="px-6 pb-5 text-sm text-[#44474D] leading-relaxed text-right">
