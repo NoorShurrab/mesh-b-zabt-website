@@ -25,8 +25,10 @@ export function initSteps() {
   
   if (stepsCount === 5) {
     grid.classList.add('md:grid-cols-3', 'lg:grid-cols-5')
-  } else {
+  } else if (stepsCount === 4) {
     grid.classList.add('md:grid-cols-2', 'lg:grid-cols-4')
+  } else {
+    grid.classList.add('md:grid-cols-2', 'lg:grid-cols-3')
   }
 
   // Steps

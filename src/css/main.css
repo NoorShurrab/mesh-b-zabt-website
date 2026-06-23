@@ -57,7 +57,14 @@ html {
   background-color: #F8F9FA;
   color: #191C1D;
 }
-
+@layer utilities {
+  .text-webkit-left {
+    text-align: -webkit-left;
+  }
+  .text-webkit-center {
+    text-align: -webkit-center;
+  }
+}
 body { overflow-x: hidden; }
 
 /* ─── SCROLL REVEAL ───────────────────────────────────────────── */
