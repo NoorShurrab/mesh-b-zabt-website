@@ -23,6 +23,7 @@ export default defineConfig({
         const whyInstitutions = readFileSync('./src/partials/whyInstitutions.html', 'utf-8')
         const whyAcademic = readFileSync('./src/partials/whyAcademic.html', 'utf-8')
         const whyBusiness = readFileSync('./src/partials/whyBusiness.html', 'utf-8')
+        const whySchool = readFileSync('./src/partials/whySchool.html','utf-8')
 
         return html
           .replace('<%- header %>', header)
@@ -37,6 +38,7 @@ export default defineConfig({
           .replace('<%- whyInstitutions %>', whyInstitutions)
           .replace('<%- whyAcademic %>', whyAcademic)
           .replace('<%- whyBusiness %>', whyBusiness)
+          .replace('<%- whySchool %>', whySchool)
           // تنظيف أي وسوم لم يتم استبدالها
           .replace(/<%- \w+ %>/g, '')
       },
