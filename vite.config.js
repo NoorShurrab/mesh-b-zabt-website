@@ -72,6 +72,7 @@ export default defineConfig({
         'blog-post': resolve(__dirname, 'pages/blog-post.html'),
         policies: resolve(__dirname, 'pages/policies.html'),
         terms: resolve(__dirname, 'pages/terms.html'),
+        returnPolicy : resolve(__dirname, 'pages/returnPolicy.html'),
       },
     },
   },
